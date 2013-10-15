@@ -52,9 +52,9 @@ clean:
 # Assembler and the GNU Compiler for ARM.  You probably do not need to
 # modify anything here.
 
-AS        = arm-elf-as
-CC        = arm-elf-gcc
-LD        = arm-elf-ld
+AS        = arm-linux-as
+CC        = arm-linux-gcc
+LD        = arm-linux-ld
 
 ASFLAGS   = --gdwarf2
 CFLAGS    = -O2 -g -Wall
@@ -66,7 +66,7 @@ LDLIBS    =
 # Compile C code (.c) to an object file (.o)
 
 %.o: %.c
-	$(CC) -c -Wa,-marm7tdmi $(CFLAGS) $< -o $@
+	$(CC) -c -Wa,-mcpu=arm7tdmi $(CFLAGS) $< -o $@
 
 # Assemble ARM assembly language source (.s) to an object file (.o)
 

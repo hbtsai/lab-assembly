@@ -5,8 +5,7 @@ _start: .global _start			@ "_start" is required by the linker
 
 main:					@ Entry to the function "main"
 
-	mov r12, #2
-	mov r1, r12
+	mov r1, #2
 	mul r1, r0, r1
 	mov r11, r1, lsl #1
 	mul r2, r0, r11
