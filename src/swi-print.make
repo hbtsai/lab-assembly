@@ -40,7 +40,7 @@ LDLIBS    =
 # Assemble ARM assembly language source (.s) to an object file (.o)
 
 %.o: %.s
-	$(AS) -marm7tdmi $(ASFLAGS) $< -o $@
+	$(AS) -mcpu=arm7tdmi $(ASFLAGS) $< -o $@
 
 # Link object files (.o) into an ARM executable (.elf), using the GNU Linker.
 

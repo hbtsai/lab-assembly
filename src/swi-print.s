@@ -14,7 +14,9 @@
 
 	.text				@ Executable code follows
 
+.comm stack, 0x10000 
 _start: .global _start			@ "_start" is required by the linker
+	ldr sp, =stack+0x10000
 	.global main			@ "main" is our main program
 
 	b	main			@ Start running the main program
